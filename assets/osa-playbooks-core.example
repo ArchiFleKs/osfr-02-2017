@@ -1,2 +1,2 @@
-os-cinder-install.yml  os-heat-install.yml     os-keystone-install.yml  os-nova-install.yml
-os-glance-install.yml  os-horizon-install.yml  os-neutron-install.yml   os-swift-install.yml
+  os-cinder-install.yml  os-heat-install.yml     os-keystone-install.yml  os-nova-install.yml
+  os-glance-install.yml  os-horizon-install.yml  os-neutron-install.yml   os-swift-install.yml

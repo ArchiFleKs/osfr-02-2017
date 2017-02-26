@@ -59,7 +59,14 @@ const images = {
   magnum_m: require("../assets/magnum/OpenStack_Project_Magnum_horizontal.png"),
   osa_h: require("../assets/openstack-ansible/OpenStack_Project_OpenStackAnsible_horizontal.png"),
   osa_v: require("../assets/openstack-ansible/OpenStack_Project_OpenStackAnsible_vertical.png"),
-  osa_m: require("../assets/openstack-ansible/OpenStack_Project_OpenStackAnsible_mascot.png")
+  osa_m: require("../assets/openstack-ansible/OpenStack_Project_OpenStackAnsible_mascot.png"),
+  glance_v: require("../assets/Glance/OpenStack_Project_Glance_vertical.png"),
+  nova_v: require("../assets/Nova/OpenStack_Project_Nova_vertical.png"),
+  neutron_v: require("../assets/Neutron/OpenStack_Project_Neutron_vertical.png"),
+  cinder_v: require("../assets/Cinder/OpenStack_Project_Cinder_vertical.png"),
+  heat_v: require("../assets/Heat/OpenStack_Project_Heat_vertical.png"),
+  horizon_v: require("../assets/Horizon/OpenStack_Project_Horizon_vertical.png"),
+  keystone_v: require("../assets/Keystone/OpenStack_Project_Keystone_vertical.png")
 };
 
 preloader(images);
@@ -119,7 +126,7 @@ export default class Presentation extends React.Component {
             </Fill>
           </Layout>
           <List margin="20px auto auto" textColor="tertiary">
-            <ListItem>Bring containers to OpenStack</ListItem>
+            <ListItem>Brings containers to OpenStack</ListItem>
             <ListItem>Started in 2014</ListItem>
             <ListItem>Big Tent</ListItem>
             <ListItem>Provide easy deployment of COE</ListItem>
@@ -127,9 +134,11 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={4} caps textColor="secondary">
-            COE Evolution
+            COE Evolutions
           </Heading>
-          <Text textColor="tertiary">At first only</Text>
+          <Heading size={5} caps textColor="tertiary">
+            At first
+          </Heading>
           <Image src={images.kubernetes.replace("/", "")} height="200" padding="10"/>
           <Text textColor="tertiary">Rewrite of the Kubernetes API</Text>
           <CodePane
@@ -140,9 +149,11 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={4} caps textColor="secondary">
-            COE Evolution
+            COE Evolutions
           </Heading>
-          <Text textColor="tertiary">Now</Text>
+          <Heading size={5} caps textColor="tertiary">
+            Now
+          </Heading>
           <Image src={images.kubernetes.replace("/", "")} height="200" padding="10"/>
           <Image src={images.swarm.replace("/", "")} height="200" padding="10"/>
           <Image src={images.mesos.replace("/", "")} height="200"padding="10"/>
@@ -150,12 +161,49 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={4} caps textColor="secondary">
+            COE Evolutions
+          </Heading>
+          <List textColor="tertiary">
+            <ListItem>Docker 1.12</ListItem>
+            <ListItem>Kubernetes 1.5</ListItem>
+            <ListItem>No Docker Swarm Mode</ListItem>
+            <ListItem>Not all K8s recommended default</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={4} caps textColor="secondary">
+            Magnum
+          </Heading>
+          <Heading size={5} caps fit textColor="tertiary">
+            Integration with OpenStack Services
+          </Heading>
+          <List textColor="tertiary">
+            <ListItem textSize="1.3em">Magnum leverage OpenStack services</ListItem>
+            <ListItem textSize="1.3em">To create cluster</ListItem>
+            <ListItem textSize="1.3em">To provide storage</ListItem>
+            <ListItem textSize="1.3em">To provide networking services</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={4} caps textColor="secondary">
+            Magnum Caveats
+          </Heading>
+          <List textColor="tertiary">
+            <ListItem>Drivers are sync with OS releases</ListItem>
+            <ListItem>COE features not all up to date</ListItem>
+            <ListItem>Magnum production deployment ?</ListItem>
+            <ListItem>Not enough drivers customization</ListItem>
+            <ListItem>Mostly Fedora Atomic Drivers</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={4} caps textColor="secondary">
             Magnum in production ?
           </Heading>
           <List textColor="tertiary">
-            <ListItem>Not included in most ditros</ListItem>
-            <ListItem>Development is happening really fast</ListItem>
-            <ListItem>Backport upstream patches</ListItem>
+            <ListItem>Not included in most distros</ListItem>
+            <ListItem>Development is happening fast</ListItem>
+            <ListItem>Backport upstream patches ?</ListItem>
             <ListItem>Docker and Kubernetes releases cycle ?</ListItem>
           </List>
         </Slide>
@@ -181,19 +229,58 @@ export default class Presentation extends React.Component {
             OpenStack Ansible
           </Heading>
           <List textColor="tertiary">
-            <ListItem>Common "Core" services:</ListItem>
+            <ListItem>Common services :</ListItem>
+            <Image src={images.keystone_v.replace("/", "")} height="100" padding="10"/>
+            <Image src={images.nova_v.replace("/", "")} height="100" padding="10"/>
+            <Image src={images.neutron_v.replace("/", "")} height="100" padding="10"/>
+            <Image src={images.heat_v.replace("/", "")} height="100" padding="10"/>
+            <Image src={images.glance_v.replace("/", "")} height="100" padding="10"/>
+            <Image src={images.horizon_v.replace("/", "")} height="100" padding="10"/>
+            <Image src={images.cinder_v.replace("/", "")} height="100" padding="10"/>
             <CodePane
               lang="bash"
               source={require("raw-loader!../assets/osa-playbooks-core.example")}
-              margin="20px auto"
+              margin="10px auto"
             />
-            <ListItem>Extra services:</ListItem>
+            <ListItem>Extra services :</ListItem>
             <CodePane
               lang="bash"
               source={require("raw-loader!../assets/osa-playbooks-extra.example")}
               margin="20px auto"
             />
           </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={4} caps textColor="secondary">
+            OpenStack Ansible
+          </Heading>
+          <Heading size={5} caps textColor="tertiary">
+            Packaging
+          </Heading>
+          <List textColor="tertiary">
+            <ListItem>Local repository server</ListItem>
+            <ListItem>Packages are built from sources</ListItem>
+            <ListItem>Build pip wheel package</ListItem>
+          </List>
+          <Text caps textColor="secondary">Not easy to develop on project</Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={4} caps textColor="secondary">
+            OpenStack Ansible
+          </Heading>
+          <Heading size={5} caps textColor="tertiary">
+            Enter developer mode
+          </Heading>
+          <List textColor="tertiary">
+            <ListItem>Directly built from a Git repo</ListItem>
+            <ListItem>Per project choice</ListItem>
+            <ListItem>Deploy from custom branch/repo</ListItem>
+          </List>
+          <CodePane
+            lang="yaml"
+            source={require("raw-loader!../assets/osa-dev-magnum.example")}
+            margin="20px auto"
+          />
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={6} textColor="primary" caps>Typography</Heading>

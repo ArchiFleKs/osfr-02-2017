@@ -1,5 +1,3 @@
-Positional arguments:
-  <subcommand>
     bay-create          Create a bay.
     container-create    Create a container.
     node-create         Create a node.

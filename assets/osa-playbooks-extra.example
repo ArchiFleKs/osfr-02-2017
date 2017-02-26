@@ -1,2 +1,2 @@
-os-aodh-install.yml      os-ceilometer-install.yml  os-ironic-install.yml  os-rally-install.yml  os-sahara-install.yml   os-trove-install.yml
-os-barbican-install.yml  os-designate-install.yml   os-magnum-install.yml  os-rally-install.yml  os-tempest-install.yml
+  os-aodh-install.yml      os-ceilometer-install.yml  os-ironic-install.yml  os-rally-install.yml  os-sahara-install.yml   os-trove-install.yml
+  os-barbican-install.yml  os-designate-install.yml   os-magnum-install.yml  os-rally-install.yml  os-tempest-install.yml

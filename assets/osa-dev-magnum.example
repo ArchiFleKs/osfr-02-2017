@@ -1,0 +1,6 @@
+user_variables.yml
+---
+magnum_dashboard_git_install_branch: master
+magnum_git_repo: https://github.com/ArchiFleKs/magnum/
+magnum_git_install_branch: coreos_swarmmode_v1
+magnum_developer_mode: true
