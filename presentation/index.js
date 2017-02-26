@@ -52,7 +52,14 @@ const images = {
   magnum_pn: require("../assets/magnum_pn.png"),
   swarm: require("../assets/swarm.png"),
   mesos: require("../assets/mesos-logo.png"),
-  kubernetes: require("../assets/kubernetes-logo.png")
+  kubernetes: require("../assets/kubernetes-logo.png"),
+  dcos: require("../assets/dcos.png"),
+  magnum_h: require("../assets/magnum/OpenStack_Project_Magnum_horizontal.png"),
+  magnum_v: require("../assets/magnum/OpenStack_Project_Magnum_horizontal.png"),
+  magnum_m: require("../assets/magnum/OpenStack_Project_Magnum_horizontal.png"),
+  osa_h: require("../assets/openstack-ansible/OpenStack_Project_OpenStackAnsible_horizontal.png"),
+  osa_v: require("../assets/openstack-ansible/OpenStack_Project_OpenStackAnsible_vertical.png"),
+  osa_m: require("../assets/openstack-ansible/OpenStack_Project_OpenStackAnsible_mascot.png")
 };
 
 preloader(images);
@@ -103,7 +110,14 @@ export default class Presentation extends React.Component {
           <Heading size={4} caps textColor="secondary">
             Magnum at glance
           </Heading>
-          <Link href="https://www.openstack.org/software/releases/newton/components/magnum"><Image src={images.magnum_pn.replace("/", "")} margin="20px auto auto"/></Link>
+          <Layout>
+            <Fill>
+              <Image src={images.magnum_h.replace("/", "")} margin="1.5em auto auto" height="150px"/>
+            </Fill>
+            <Fill>
+              <Link href="https://www.openstack.org/software/releases/newton/components/magnum"><Image src={images.magnum_pn.replace("/", "")} margin="1.5em auto auto" height="150px"/></Link>
+            </Fill>
+          </Layout>
           <List margin="20px auto auto" textColor="tertiary">
             <ListItem>Bring containers to OpenStack</ListItem>
             <ListItem>Started in 2014</ListItem>
@@ -117,16 +131,69 @@ export default class Presentation extends React.Component {
           </Heading>
           <Text textColor="tertiary">At first only</Text>
           <Image src={images.kubernetes.replace("/", "")} height="200" padding="10"/>
+          <Text textColor="tertiary">Rewrite of the Kubernetes API</Text>
+          <CodePane
+            lang="bash"
+            source={require("raw-loader!../assets/magnum_oldcli.example")}
+            margin="20px auto"
+          />
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={4} caps textColor="secondary">
             COE Evolution
           </Heading>
-          <Text textColor="tertiary">At first only</Text>
+          <Text textColor="tertiary">Now</Text>
           <Image src={images.kubernetes.replace("/", "")} height="200" padding="10"/>
-
           <Image src={images.swarm.replace("/", "")} height="200" padding="10"/>
           <Image src={images.mesos.replace("/", "")} height="200"padding="10"/>
+          <Image src={images.dcos.replace("/", "")} height="200"padding="10"/>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={4} caps textColor="secondary">
+            Magnum in production ?
+          </Heading>
+          <List textColor="tertiary">
+            <ListItem>Not included in most ditros</ListItem>
+            <ListItem>Development is happening really fast</ListItem>
+            <ListItem>Backport upstream patches</ListItem>
+            <ListItem>Docker and Kubernetes releases cycle ?</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={4} caps textColor="secondary">
+            OpenStack Ansible
+          </Heading>
+          <List textColor="tertiary">
+            <ListItem textSize="1em">Originally developed by Rackspace</ListItem>
+            <ListItem textSize="1em">Set of Ansible playbooks to deploy OpenStack</ListItem>
+            <ListItem textSize="1em">Uses LXC to run services in containers</ListItem>
+            <ListItem textSize="1em">Ocata releases scheduled by 10 Mar 2017</ListItem>
+          </List>
+          <CodePane
+            lang="bash"
+            source={require("raw-loader!../assets/osa-branch.example")}
+            margin="10px auto"
+          />
+          <Image src={images.osa_h.replace("/", "")} height="130px" padding="10"/>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={4} caps textColor="secondary">
+            OpenStack Ansible
+          </Heading>
+          <List textColor="tertiary">
+            <ListItem>Common "Core" services:</ListItem>
+            <CodePane
+              lang="bash"
+              source={require("raw-loader!../assets/osa-playbooks-core.example")}
+              margin="20px auto"
+            />
+            <ListItem>Extra services:</ListItem>
+            <CodePane
+              lang="bash"
+              source={require("raw-loader!../assets/osa-playbooks-extra.example")}
+              margin="20px auto"
+            />
+          </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={6} textColor="primary" caps>Typography</Heading>
