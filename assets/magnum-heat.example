@@ -1,0 +1,5 @@
+magnum/drivers# ls
+common  heat  k8s_coreos_v1  k8s_fedora_atomic_v1  k8s_fedora_ironic_v1  mesos_ubuntu_v1  swarm_fedora_atomic_v1
+
+magnum/drivers# ls k8s_fedora_atomic_v1/templates
+COPYING  kubecluster.yaml  kubemaster.yaml  kubeminion.yaml

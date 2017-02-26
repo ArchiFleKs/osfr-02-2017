@@ -1,0 +1,6 @@
+ansible_roles_requirements.yaml
+---
+- name: os_magnum
+  scm: git
+  src: https://git.openstack.org/openstack/openstack-ansible-os_magnum
+  version: master
