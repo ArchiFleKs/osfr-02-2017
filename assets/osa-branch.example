@@ -1,0 +1,9 @@
+root@os-controller-01:/opt/openstack-ansible# git branch -a
+  master
+* stable/newton
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/liberty
+  remotes/origin/master
+  remotes/origin/stable/mitaka
+  remotes/origin/stable/newton
+  remotes/origin/stable/ocata
