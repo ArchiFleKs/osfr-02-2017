@@ -80,7 +80,8 @@ const images = {
   rally_v: require("../assets/Rally/OpenStack_Project_Rally_vertical.png"),
   osa_dev_screenshot: require("../assets/github-archifleks.png"),
   osa_review_screenshot: require("../assets/os-review-screenshot.png"),
-  magnum_bp: require("../assets/magnum_bp.png")
+  magnum_bp: require("../assets/magnum_bp.png"),
+  come: require("../assets/come.gif")
 };
 
 preloader(images);
@@ -454,21 +455,25 @@ export default class Presentation extends React.Component {
           <Image src={images.magnum_bp.replace("/", "")} height="250" padding="10"/>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <Heading textColor="primary" size={1} caps>
+          <Heading textColor="primary" size={3} caps>
             Thank you !
           </Heading>
-          <Text margin="30px auto auto">
+          <Text margin="10px auto auto">
             <Link textColor="primary" href="https://github.com/ArchiFleKs">@ArchiFleKs</Link>
           </Text>
-          <Text margin="30px auto auto">
+          <Text margin="10px auto auto">
             <Link textColor="primary" href="https://archifleks.github.io/osfr-02-2017">archifleks.github.io/osfr-02-2017</Link>
           </Text>
-          <Text margin="30px auto auto">
+          <Text margin="10px auto auto">
             <Link textColor="primary" href="https://osones.com">osones.com</Link>
           </Text>
-          <Text margin="30px auto auto">
+          <Text margin="10px auto auto">
             <Link textColor="primary" margin="10px auto auto" href="https://twitter.com/osones">@osones</Link>
           </Text>
+          <Image src={images.come.replace("/", "")} height="250" padding="10"/>
+          <Heading textColor="primary" size={4} caps>
+            We're hiring !
+          </Heading>
         </Slide>
       </Deck>
     );
