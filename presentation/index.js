@@ -107,6 +107,12 @@ export default class Presentation extends React.Component {
           <Heading size={1} fit caps textColor="secondary">
             Containers Orchestration on OpenStack
           </Heading>
+          <Text margin="40px auto auto" caps textColor="tertiary">
+            Run and contribute
+          </Text>
+          <Text caps textColor="tertiary">
+            with Openstack Ansible
+          </Text>
           <Layout>
             <Fill>
               <Image src={images.openstack_h.replace("/", "")} margin="1.5em auto auto" height="100px"/>
@@ -130,7 +136,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={4} caps textColor="secondary">
-            Magnum at glance
+            Magnum at a glance
           </Heading>
           <Layout>
             <Fill>
@@ -144,15 +150,28 @@ export default class Presentation extends React.Component {
             <ListItem>Brings containers to OpenStack</ListItem>
             <ListItem>Started in 2014</ListItem>
             <ListItem>Big Tent</ListItem>
-            <ListItem>Provide easy deployment of COE</ListItem>
+            <ListItem>Provides easy deployment of COE</ListItem>
           </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={4} caps textColor="secondary">
+            Magnum at a glance
+          </Heading>
+          <Heading size={5} caps margin="30px auto auto" textColor="tertiary">
+            Equivalent to
+          </Heading>
+          <Text textColor="tertiary" margin="30px auto auto" fit caps>Kops - Kargo - Kubeadm - Kube-aws</Text>
+          <Text textColor="secondary" margin="30px auto auto" textSize="1.5em">▼</Text>
+          <Text textColor="tertiary" margin="30px auto auto">Cluster Deployment</Text>
+          <Text textColor="tertiary">Cluster life cycle</Text>
+          <Text margin="40px auto auto" textColor="secondary" caps fit>Magnum is integrated into OpenStack</Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={4} caps textColor="secondary">
             COE
           </Heading>
           <Heading size={5} caps textColor="tertiary">
-            At first
+            At the beginning
           </Heading>
           <Image src={images.kubernetes.replace("/", "")} height="200" padding="10"/>
           <Text textColor="tertiary">Rewrite of the Kubernetes API</Text>
@@ -167,7 +186,7 @@ export default class Presentation extends React.Component {
             COE
           </Heading>
           <Heading size={5} caps textColor="tertiary">
-            Now
+            Today
           </Heading>
           <Image src={images.kubernetes.replace("/", "")} height="200" padding="10"/>
           <Image src={images.swarm.replace("/", "")} height="200" padding="10"/>
@@ -179,11 +198,11 @@ export default class Presentation extends React.Component {
             COE
           </Heading>
           <List textColor="tertiary">
-            <ListItem>Docker 1.12</ListItem>
+            <ListItem>Docker Swarm Legacy 1.12</ListItem>
             <ListItem>Kubernetes 1.5</ListItem>
             <ListItem>DC/OS</ListItem>
             <ListItem>No Docker Swarm Mode</ListItem>
-            <ListItem>Not all K8s recommended default</ListItem>
+            <ListItem>Not all K8s recommended defaults</ListItem>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
@@ -207,9 +226,9 @@ export default class Presentation extends React.Component {
           <Image src={images.heat_h.replace("/", "")} padding="5" height="120px"/>
           <List textColor="tertiary">
             <ListItem textSize="1.2em">Magnum leverages Heat to create COE</ListItem>
-            <ListItem textSize="1.2em">Each drivers is a working heat stack</ListItem>
+            <ListItem textSize="1.2em">Each drivers is a working Heat stack</ListItem>
             <ListItem textSize="1.2em">Configuration is done with SoftwareConfig</ListItem>
-            <ListItem textSize="1.2em">Allow to use other OpenStack resources</ListItem>
+            <ListItem textSize="1.2em">Allows to use other OpenStack resources</ListItem>
           </List>
           <CodePane
             lang="Bash"
@@ -275,6 +294,16 @@ export default class Presentation extends React.Component {
           <List textColor="tertiary">
             <ListItem textSize="1.1em">Store COE base image</ListItem>
             <ListItem textSize="1.1em">os_distro property for COE driver selection</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={4} caps textColor="secondary">
+            Magnum
+          </Heading>
+          <Heading size={5} caps textColor="tertiary">
+            Swift
+          </Heading>
+          <List textColor="tertiary">
             <ListItem textSize="1.1em">Can be used as a backend for Docker registry</ListItem>
           </List>
         </Slide>
@@ -283,22 +312,22 @@ export default class Presentation extends React.Component {
             Magnum Caveats
           </Heading>
           <List textColor="tertiary">
-            <ListItem>Drivers are sync with OS releases</ListItem>
-            <ListItem>COE features not all up to date</ListItem>
-            <ListItem>Magnum production deployment ?</ListItem>
-            <ListItem>Not enough drivers customization</ListItem>
-            <ListItem>Mostly Fedora Atomic Drivers</ListItem>
+            <ListItem textSize="1.3em">Drivers are sync with OpenStack releases</ListItem>
+            <ListItem textSize="1.3em">COE features not all up to date</ListItem>
+            <ListItem textSize="1.3em">Magnum production deployment ?</ListItem>
+            <ListItem textSize="1.3em">Drivers customization ?</ListItem>
+            <ListItem textSize="1.3em">Mostly Fedora Atomic Drivers</ListItem>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={4} caps textColor="secondary">
-            Magnum in production ?
+            How to run Magnum in production ?
           </Heading>
           <List textColor="tertiary">
-            <ListItem>Not included in most distros</ListItem>
-            <ListItem>Development is happening fast</ListItem>
-            <ListItem>Backport upstream patches ?</ListItem>
-            <ListItem>Docker and Kubernetes releases cycle ?</ListItem>
+            <ListItem textSize="1.3em">Not included in most OpenStack distros</ListItem>
+            <ListItem textSize="1.3em">Development is happening fast</ListItem>
+            <ListItem textSize="1.3em">Backport upstream patches ?</ListItem>
+            <ListItem textSize="1.3em">COE release cycles ?</ListItem>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
@@ -306,7 +335,7 @@ export default class Presentation extends React.Component {
             OpenStack Ansible
           </Heading>
           <List textColor="tertiary">
-            <ListItem textSize="1em">Originally developed by Rackspace</ListItem>
+            <ListItem textSize="1em">Official deployment guide</ListItem>
             <ListItem textSize="1em">Set of Ansible playbooks to deploy OpenStack</ListItem>
             <ListItem textSize="1em">Uses LXC to run services in containers</ListItem>
             <ListItem textSize="1em">Ocata release (15.0) scheduled by 10 Mar 2017</ListItem>
@@ -361,7 +390,7 @@ export default class Presentation extends React.Component {
             <ListItem>Packages are built from sources</ListItem>
             <ListItem>Build pip wheel package</ListItem>
           </List>
-          <Text caps textColor="secondary">Not easy to develop on project</Text>
+          <Text caps fit textColor="secondary">Not easy to develop on project</Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={4} caps textColor="secondary">
@@ -390,7 +419,7 @@ export default class Presentation extends React.Component {
           </Heading>
           <List textColor="tertiary">
             <ListItem textSize="1.2em">OS and OSA roles on Ocata branch</ListItem>
-            <ListItem textSize="1.2em">Magnum OSA role from master</ListItem>
+            <ListItem textSize="1.2em">Magnum OSA role from master ⚠</ListItem>
             <ListItem textSize="1.2em">Custom magnum git repo</ListItem>
             <ListItem textSize="1.2em">Magnum from custom branch </ListItem>
           </List>
@@ -430,6 +459,20 @@ export default class Presentation extends React.Component {
             Work in progress
           </Heading>
           <Heading size={5} caps textColor="tertiary">
+            Fixing some issues
+          </Heading>
+          <List textColor="tertiary">
+            <ListItem textSize="1.2em">Linked to production deployment</ListItem>
+            <ListItem textSize="1.2em">Insecure or custom CA certificates</ListItem>
+            <ListItem textSize="1.2em">Auth URL and Magnum URL issues</ListItem>
+            <ListItem textSize="1.2em">Master and stable cohabitation</ListItem>
+          </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={4} caps textColor="secondary">
+            Work in progress
+          </Heading>
+          <Heading size={5} caps textColor="tertiary">
             Swarm Mode
           </Heading>
           <List textColor="tertiary">
@@ -453,6 +496,11 @@ export default class Presentation extends React.Component {
             <ListItem textSize="1.2em">Support K8s addons</ListItem>
           </List>
           <Image src={images.magnum_bp.replace("/", "")} height="250" padding="10"/>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary" textColor="secondary">
+          <Heading textColor="secondary" size={3} caps fit>
+            Conclusion
+          </Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <Heading textColor="primary" size={3} caps>
