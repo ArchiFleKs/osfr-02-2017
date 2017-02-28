@@ -259,7 +259,7 @@ export default class Presentation extends React.Component {
             <ListItem textSize="1.1em">LBaaSv2 to enable multi master COE</ListItem>
             <ListItem textSize="1.1em">Allow creation of K8s Service LoadBalancer</ListItem>
             <ListItem textSize="1.1em">Flannel with host-gw (Allowed Address Pairs)</ListItem>
-            <ListItem textSize="1.1em">Kuryr in near future ?</ListItem>
+            <ListItem textSize="1.1em">Kuryr in near future?</ListItem>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
@@ -314,20 +314,20 @@ export default class Presentation extends React.Component {
           <List textColor="tertiary">
             <ListItem textSize="1.3em">Drivers are sync with OpenStack releases</ListItem>
             <ListItem textSize="1.3em">COE features not all up to date</ListItem>
-            <ListItem textSize="1.3em">Magnum production deployment ?</ListItem>
-            <ListItem textSize="1.3em">Drivers customization ?</ListItem>
+            <ListItem textSize="1.3em">Magnum production deployment?</ListItem>
+            <ListItem textSize="1.3em">Drivers customization?</ListItem>
             <ListItem textSize="1.3em">Mostly Fedora Atomic Drivers</ListItem>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={4} caps textColor="secondary">
-            How to run Magnum in production ?
+            How to run Magnum in production?
           </Heading>
           <List textColor="tertiary">
-            <ListItem textSize="1.3em">Not included in most OpenStack distros</ListItem>
+            <ListItem textSize="1.3em">Not included in all OpenStack distros</ListItem>
             <ListItem textSize="1.3em">Development is happening fast</ListItem>
-            <ListItem textSize="1.3em">Backport upstream patches ?</ListItem>
-            <ListItem textSize="1.3em">COE release cycles ?</ListItem>
+            <ListItem textSize="1.3em">Backport upstream patches?</ListItem>
+            <ListItem textSize="1.3em">COE release cycles?</ListItem>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
@@ -504,7 +504,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <Heading textColor="primary" size={3} caps>
-            Thank you !
+            Thank you!
           </Heading>
           <Text margin="10px auto auto">
             <Link textColor="primary" href="https://github.com/ArchiFleKs">@ArchiFleKs</Link>
@@ -520,7 +520,7 @@ export default class Presentation extends React.Component {
           </Text>
           <Image src={images.come.replace("/", "")} height="250" padding="10"/>
           <Heading textColor="primary" size={4} caps>
-            We're hiring !
+            We're hiring!
           </Heading>
         </Slide>
       </Deck>
